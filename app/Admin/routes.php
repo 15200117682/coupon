@@ -12,4 +12,11 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('admin.home');
 
+    $router->resource('coupon', CouponController::class);   //优惠券
+
+    $router->resource('goods', GoodsController::class);     //商品
+
+    $router->resource('cate', CateController::class);     //分类
+
+
 });
